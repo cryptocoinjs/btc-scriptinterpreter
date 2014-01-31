@@ -1,4 +1,4 @@
-// var ScriptInterpreter = require('../')
+var ScriptInterpreter = require('../')
 var binConv = require('binstring');
 var Transaction = require('btc-transaction').Transaction
 var BigInt = require('bigi')
