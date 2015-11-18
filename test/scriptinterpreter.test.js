@@ -1,10 +1,6 @@
 var ScriptInterpreter = require('../').ScriptInterpreter
-var Script = require('btc-script');
 var binConv = require('binstring');
 var Transaction = require('btc-transaction').Transaction
-var BigInt = require('bigi')
-var sha256 = require('sha256')
-var ecdsa = require('ecdsa')
 var async = require('async')
 var assert = require('chai').assert
 require('terst')
@@ -26,9 +22,9 @@ describe('ScriptInterpreter', function() {
           var txid = input.outpoint.hash
           var index = input.outpoint.index
           var prevOut = previousOutputs[inputIndex]
-          var scriptSig = input.script
-          var scriptPubkey = new Script(prevOut)
-          ScriptInterpreter.verify(scriptSig, scriptPubkey, tx, inputIndex, hashType, function (err, result) {
+          // var scriptSig = input.script
+          // var scriptPubkey = new Script(prevOut)
+          ScriptInterpreter.verify(prevOut, tx, inputIndex, hashType, function (err, result) {
             if (err) {
               console.error(testIndex, err)
               return cb(err)
@@ -62,9 +58,9 @@ describe('ScriptInterpreter', function() {
           var txid = input.outpoint.hash
           var index = input.outpoint.index
           var prevOut = previousOutputs[inputIndex]
-          var scriptSig = input.script
-          var scriptPubkey = new Script(prevOut)
-          ScriptInterpreter.verify(scriptSig, scriptPubkey, tx, inputIndex, hashType, function (err, result) {
+          // var scriptSig = input.script
+          // var scriptPubkey = new Script(prevOut)
+          ScriptInterpreter.verify(prevOut, tx, inputIndex, hashType, function (err, result) {
             if (err) {
               return cb(err)
             }
