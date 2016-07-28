@@ -15,5 +15,22 @@
   "bugs": {
     "url": "https://github.com/cryptocoinjs/btc-scriptinterpreter/issues"
   },
-  "homepage": "https://github.com/cryptocoinjs/btc-scriptinterpreter"
+  "homepage": "https://github.com/cryptocoinjs/btc-scriptinterpreter",
+  "dependencies": {
+    "bigi": "^1.4.1",
+    "binstring": "^0.2.1",
+    "btc-opcode": "0.0.1",
+    "btc-script": "^0.1.12",
+    "btc-transaction": "^0.1.8",
+    "buffertools": "^2.1.4",
+    "crypto-hashing": "^0.3.1",
+    "ecdsa": "^0.6.0"
+  },
+  "devDependencies": {
+    "async": "^1.5.0",
+    "btc-transaction": "^0.1.8",
+    "chai": "^3.4.1",
+    "sha256": "^0.2.0",
+    "terst": "^0.3.0"
+  }
 }
